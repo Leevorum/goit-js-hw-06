@@ -14,9 +14,9 @@ const images = [
 ];
 // Получаем селектор UL
 const ulEl = document.querySelector(".gallery");
-console.log(ulEl);
+// Делаем разметку с помощью мапа и шаблонных строк
 const galleryMarkup = images
   .map(image => `<li class="gallery-item"><img src="${image.url}" width = 320px height = 200px; alt="${image.alt}"></li>`)
   .join("");
-console.log(galleryMarkup);
+// Добавляем в хтмл
 ulEl.insertAdjacentHTML("afterbegin", galleryMarkup);
